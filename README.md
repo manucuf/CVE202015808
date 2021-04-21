@@ -19,7 +19,7 @@ A proof of concept of CVE-2020-15808 vulnerability exploit on STM32F4 Discovery 
     
     Get the hex values corresponding to STM32 Virtual Com Port. They will be Vendor Id (VID) and Product Id (PID)
 
-5. Edit main.cpp replacing to VID and PID macro with the found values. Default are for STM32F4 Discovery
+5. Edit main.c replacing to VID and PID macro with the found values. Default are for STM32F4 Discovery
 6. Compile main.c
     > gcc main.c
 7. Execute a.out with root permission
