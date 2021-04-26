@@ -109,6 +109,7 @@ int main(void)
 
   /* Infinite loop */
   char *buffer = (char *)malloc(13*sizeof(char)); // offset: 0x22c
+  if (buffer == NULL) return -1;
   sprintf(buffer, "%s", "segreto");
 
   int b = buffer[0] + buffer[1];
@@ -116,6 +117,10 @@ int main(void)
 
   //AESCBCctx_stt AESctx;
   AESCBCctx_stt *AESctx = (AESCBCctx_stt *)malloc(sizeof(AESCBCctx_stt));
+  if (AESctx == NULL) {
+      free(buffer);
+      return -1;
+  }
 
   uint32_t error_status = AES_SUCCESS;
   int32_t outputLength = 0;

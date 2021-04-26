@@ -98,6 +98,7 @@ int main(void)
 
   /* Infinite loop */
   char *buffer = (char *)malloc(13*sizeof(char));
+  if (buffer == NULL) return -1;
   sprintf(buffer, "%s", "segreto");
 
   int b = buffer[0] + buffer[1];

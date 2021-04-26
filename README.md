@@ -26,3 +26,7 @@ A proof of concept of CVE-2020-15808 vulnerability exploit on STM32F4 Discovery 
     > sudo ./a.out
 8. In order to view the dump use 
     > hexdump -C result.bin
+
+<br><br>
+## Example dump of xcube-cryptolib
+Follow the same instruction for VulnerableFirmwareF4_cryptolib. The content of AESctx should start from 0x1b2c offset from dump
